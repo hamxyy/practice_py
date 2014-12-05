@@ -3,7 +3,7 @@ Created on 2 Dec, 2014
 
 @author: z0037v8z
 '''
-from Algorithms import gradient_descent
+from algorithms import gradient_descent
 from hypothesis.LogisticHypothesis import LogisticHypothesis
 
 # training_set = [
