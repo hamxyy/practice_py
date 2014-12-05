@@ -8,7 +8,7 @@ class LinearRegression(object):
     def __init__(self):
         pass
     
-    def apply(self, dataset, learningRate=0.01):
+    def _apply(self, dataset, learningRate=0.01):
         # h(x) = q0 + q1*x 
         q0 = 0.0;
         q1 = 0.0;
@@ -49,4 +49,4 @@ dataset = [
     [8, 900],
 ]
 algo = LinearRegression()
-algo.apply(dataset)
+algo._apply(dataset)

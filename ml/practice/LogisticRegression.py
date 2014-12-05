@@ -8,7 +8,7 @@ class LogisticRegression(object):
     def __init__(self):
         pass
     
-    def apply(self, training_set, learningRate=0.01):
+    def _apply(self, training_data, learningRate=0.01):
         # h(x) = g(Q`x)
         # g(z_ = 1/(1+e^(-z))
         q0 = 0.0;
@@ -19,9 +19,9 @@ class LogisticRegression(object):
         derivative1 = 0.0;
         cost = 0.0
         lastCost = cost
-        m = len(training_set)
+        m = len(training_data)
         while(True):
-            for pair in training_set:
+            for pair in training_data:
                 x = pair[0]
                 y = pair[1]
                 derivative0 += q0 + q1 * x - y
@@ -49,5 +49,5 @@ training_set = [
     [7, 800],
     [8, 900],
 ]
-algo = LinearRegression()
-algo.apply(training_set)
+algo = LogisticRegression()
+algo._apply(training_set)
