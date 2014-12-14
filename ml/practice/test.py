@@ -36,4 +36,4 @@ training_set = [
 hypo = LogisticHypothesis();
 gradient_descent(hypothesis=hypo,
                  training_set=training_set,
-                 convergent_ratio=0.001)
+                 convergent_criteria=0.001)
